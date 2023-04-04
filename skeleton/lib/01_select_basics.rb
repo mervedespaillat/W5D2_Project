@@ -63,11 +63,11 @@ def scandinavia
   # 'Sweden'
   execute(<<-SQL)
   SELECT 
-    name, population
+     name, population
   FROM
     countries
   WHERE 
-    name LIKE "Finland";
+    name IN ('Denmark', 'Finland', 'Norway', 'Sweden');
   SQL
 end
 
